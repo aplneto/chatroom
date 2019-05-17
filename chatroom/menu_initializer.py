@@ -15,14 +15,14 @@ check_ip = lambda: gethostbyname(gethostname())
 
 # Variáveis globais
 
-LOCAL_CHAT_IP = check_ip()
+LOCAL_CHAT_IP = '172.20.4.134'
 LOCAL_CHAT_PORT = 5500
 
 MY_SERVER_NAME = 'My Server'
 ADMIN_NAME = 'admin'
 LIMIT = 10
 
-REMOTE_CHAT_IP = 'localhost'
+REMOTE_CHAT_IP = '172.20.4.134'
 REMOTE_CHAT_PORT = 4400
 
 def menu_inputs():
@@ -86,10 +86,10 @@ def configurar():
         if comando == 0:
             break
         if comando == 1:
-            conexao_remota()
+            conexao_local()
             break
         elif comando == 2:
-            conexao_local()
+            conexao_remota()
             break
         elif comando == 3:
             meu_servidor()
