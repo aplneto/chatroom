@@ -19,6 +19,7 @@ LOCAL_CHAT_IP = check_ip()
 LOCAL_CHAT_PORT = 5500
 
 MY_SERVER_NAME = 'My Server'
+ADMIN_NAME = 'admin'
 
 REMOTE_CHAT_IP = 'localhost'
 REMOTE_CHAT_PORT = 4400
