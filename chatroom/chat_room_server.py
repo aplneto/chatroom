@@ -23,13 +23,13 @@ import threading
 
 #Função Auxiliar
 def makethread(func):
-    """Wrapper que transforma uma função qualquer numa Thread
+    """Decorator que transforma uma função qualquer numa Thread
     
     Args:
         func (function): função a ser transformada em Thread
     
     Returns:
-        (function) wrapper da função a ser transformada em thread
+        (function) thread da função
     """
     def _thread(*args, **kwargs):
         """Decorador interno da função
