@@ -22,25 +22,24 @@ Você pode ajustar as configurações do script através das variáveis
 globais, ou através do menu de configuração.
 
 As variáveis `LOCAL` são os valores utilizados para IP e Porta do socket
-que você está utilizando.
+que você está utilizando, caso queira se conectar a um servidor existente.
 
 ```python3
 LOCAL_CHAT_IP = 'localhost'
 LOCAL_CHAT_PORT = 5500
 ```
 
-As configurações remotas são ajustadas com o endereço do servidor ao qual
-você deseja se conectar. Por exemplo:
+As configurações remotas são usadas tanto para se conectar a um servidor,
+quanto para definir a qual servidor um usuário deseja se conectar.
 
 ```python3
 REMOTE_CHAT_IP = 'localhost'
 REMOTE_CHAT_PORT = 4400
 ```
-Lembre-se de usar números de porta diferentes caso esteja tentando conexão
-cliente-servidor em scripts no mesmo computador.
 
-As configurações acima resultariam numa tentativa de conexão a um cliente
-hospedado na mesma máquina (`localhost`) na porta 4400.
+As configurações acima resultariam numa tentativa de conexão a um servidor
+hospedado na mesma máquina (`localhost`) na porta 4400, a partir da porta
+5500.
 Caso esteja tentanto realizar uma conexão com um servidor em uma máquina
 diferente, utilize o ip e porta da máquina.
 Você pode descobrir o ip da sua máquina através do comando bash `ipconfig`
@@ -64,3 +63,8 @@ no servidor ao qual você deseja se conectar.
 
 Por fim, caso escolha configurar as variáveis globais direto no script,
 basta executar o script e seguir os passos que desejar no menu.
+
+## Usando na mesma máquina
+Você pode executar um cliente e um servidor no mesmo console, mas caso queira
+conectar vários clientes diferentes ao mesmo servidor, use múltiplos consoles
+mudando apenas o valor da variável `LOCAL_CHAT_PORT`.
