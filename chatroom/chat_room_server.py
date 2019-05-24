@@ -226,11 +226,12 @@ class ChatRoomServer(threading.Thread):
         '''
         welcome = "Bem-vindo a {0}!\nPor favor, escolha um nome de usuário."
         cliente.send(welcome.format(self.room_name).encode())
+        invalidos = ['admin', 'administrador', 'mod', 'moderador', self.admin]
         while True:
             nome = cliente.recv(1024).decode()
             if nome in self.clientes_conectados:
                 cliente.send('Já existe um usuário com esse nome'.encode())
-            elif nome in ['admin', 'administrador', 'mod', 'moderador']:
+            elif nome in invalidos:
                 cliente.send('Nome inválido'.encode())
             elif nome.startswith('\\'):
                 cliente.send('Nome inválido'.encode())
