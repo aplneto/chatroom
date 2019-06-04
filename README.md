@@ -68,3 +68,8 @@ basta executar o script e seguir os passos que desejar no menu.
 Você pode executar um cliente e um servidor no mesmo console, mas caso queira
 conectar vários clientes diferentes ao mesmo servidor, use múltiplos consoles
 mudando apenas o valor da variável `LOCAL_CHAT_PORT`.
+
+## Mais dicas?
+Olhe a [wiki] do repositório
+
+[wiki]: ../../wiki
